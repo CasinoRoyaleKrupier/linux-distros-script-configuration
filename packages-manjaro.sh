@@ -2,7 +2,7 @@
 
 # INSTALL PACKAGES
 pacman -Syyu
-pamac install clang gcc gdm cmake make manjaro-printer virtualbox thunderbird rhythmbox snapd putty vlc dropbox chromium torbrowser kicad
+pamac install clang gcc gdm cmake make manjaro-printer virtualbox thunderbird rhythmbox snapd putty vlc dropbox chromium torbrowser kicad remmina
 
 systemctl enable --now snapd.socket
 

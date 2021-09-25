@@ -66,19 +66,11 @@ mkdir -p ~/Templates
 rm ~/Templates/*
 unzip -q templates.zip -d ~/Templates
 
-# HOSTS FILE
-echo \ >> /etc/hosts
-echo '172.31.227.1	881-k9-01.local' >> /etc/hosts
-echo '172.31.227.1	881-k9-01' >> /etc/hosts
-echo '172.31.227.2	ws-c2960-24-s-01.local' >> /etc/hosts
-echo '172.31.227.2	ws-c2960-24-s-01' >> /etc/hosts
-echo '172.31.227.4	home-nas.local' >> /etc/hosts
-echo '172.31.227.4	home-nas' >> /etc/hosts
-echo '172.31.227.10	wap4410n-01.local' >> /etc/hosts
-echo '172.31.227.10	wap4410n-01' >> /etc/hosts
-echo '192.168.8.1	homerouter.cpe' >> /etc/hosts
-
 # INSTALL ZSH
 echo '---> Downloading "oh-my-zsh" package...'
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="bira"/g' ~/.zshrc
+
+# REMMINA
+mkdir -p ~/.local/share/remmina
+unzip -q remmina.zip ~/.local/share/remmina
